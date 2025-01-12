@@ -44,6 +44,7 @@ export function ShoppingCartProvider({
   function getItemQuantity(id: number) {
     return cartItems.find((item) => item.id === id)?.quantity || 0;
   }
+  
 
   function increaseCartQuantity(id: number) {
     setCartImes((currentItem) => {
@@ -60,6 +61,7 @@ export function ShoppingCartProvider({
       }
     });
   }
+
   function decreaseCartQuantity(id: number) {
     setCartImes((currentItem) => {
       if (currentItem.find((it) => it.id === id)?.quantity === 1) {
